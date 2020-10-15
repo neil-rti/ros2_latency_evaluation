@@ -1,0 +1,2 @@
+stamped10mb
+stamped10kb

@@ -1,0 +1,41 @@
+{
+    "nodes": [
+        {
+            "node_name": "start_node",
+            "initial_pub": [
+                {
+                    "topic_name": "topic_0",
+                    "msg_type": "stamped10b",
+                    "period_ms": 10
+                }
+            ]
+        },
+        {
+            "node_name": "data_processing_pipeline",
+            "data_processing_pipeline_nodes": 5,
+            "subscribers_start_node": {
+                "topic_name": "topic_0",
+                "msg_type": "stamped10b"
+            },
+            "publisher_data_processing_pipeline_node": {
+                "topic_name": "dpp_topic",
+                "msg_type": "stamped10b",
+                "period_ms": 10
+            },
+            "publisher_end_node": {
+                "topic_name": "end_topic",
+                "msg_type": "stamped10b",
+                "period_ms": 10
+            }
+        },
+        {
+            "node_name": "end_node",
+            "subscribers": [
+                {
+                    "topic_name": "end_topic",
+                    "msg_type": "stamped10b"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "nodes": [
+        {
+            "node_name": "start_node",
+            "publishers": [
+                {
+                    "topic_name": "talk_profile_topic",
+                    "msg_type": "stamped10b",
+                    "period_ms": 10
+                }
+            ]
+        },
+        {
+            "node_name": "end_node",
+            "subscribers": [
+                {
+                    "topic_name": "talk_profile_topic",
+                    "msg_type": "stamped10b"
+                }
+            ]
+        }
+    ]
+}

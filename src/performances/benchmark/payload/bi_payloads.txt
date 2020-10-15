@@ -1,0 +1,6 @@
+stamped256b
+stamped512b
+stamped1024b
+stamped4096b
+stamped16384b
+stamped63000b

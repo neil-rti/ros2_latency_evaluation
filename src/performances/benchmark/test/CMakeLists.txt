@@ -1,0 +1,10 @@
+find_package(ament_lint_auto REQUIRED)
+find_package(ament_cmake_gtest REQUIRED)
+find_package(ament_cmake_pytest REQUIRED)
+
+ament_lint_auto_find_test_dependencies()
+
+ament_add_gtest(test_benchmark_utils test_benchmark_utils.cpp)
+ament_target_dependencies(test_benchmark_utils performance_test performance_test_factory)
+target_include_directories(test_benchmark_utils PRIVATE ../src)
+target_link_libraries(test_benchmark_utils utils)

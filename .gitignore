@@ -1,0 +1,9 @@
+# general
+.vscode/
+env/
+
+# ros2 specif
+
+build/
+install/
+log/
