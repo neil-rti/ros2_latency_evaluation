@@ -29,7 +29,7 @@ Paper results were obtained by using the scripts in `src/scripts`. There are two
 
 Firstly, the script `testing_strategy.sh` needs to be called. If you want to change some parameters, change the variables accordingly. By default, all defined parameter values in the paper are set. A total runthrough takes approximately 62 hours. The results can be found in `install/benchmark/lib/benchmark/results`. 
 
-Secondly, the results must be post-processed. For that purpose, the script `prepare_benchmark_output_for_paper.sh <log-files-pth>` is to be used. `<log-files-path>` is the parent diretory of the results obtained from the previous step. This script calls the helper script `create_paper_csv.py`.
+Secondly, the results must be post-processed. For that purpose, the script `prepare_benchmark_output_for_paper.sh <log-files-pth>` is to be used. `<log-files-path>` is the parent diretory of the results obtained from the previous step. Check the comments in `prepare_benchmark_output_for_paper.sh` for the parameters that are to be kept fixed and that can be varied. This script calls the helper script `create_paper_csv.py`.
 In the case of Raspberry Pi, we recommend to create a symbolic link to a virtual directory in order to prevent excessive write access to the SD card. Check the comments in the scripts for further documentation.
 
 Results are saved in `<log-files-path>/paper_csvs`.
