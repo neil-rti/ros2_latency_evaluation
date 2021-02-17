@@ -10,7 +10,7 @@
 # Do not change anything here
 PUBLISHER_FREQUENCY="[1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]"
 PAYLOAD="[ \"100b\", \"1kb\", \"10kb\", \"100kb\", \"500kb\"]"
-MIDDLEWARE=" [ \"connext\", \"fastrtps\", \"cyclonedds\"]"
+MIDDLEWARE=" [ \"connextdds\", \"fastrtps\", \"cyclonedds\"]"
 QOS="[\"reliable\", \"best-effort\"]"
 
 ########################################

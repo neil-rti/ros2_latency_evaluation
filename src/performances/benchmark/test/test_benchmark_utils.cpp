@@ -140,10 +140,10 @@ TEST_F(TestBenchmarkUtils, ResultsDirName_DoesNotContaindata_processing_pipeline
 }
 
 TEST_F(TestBenchmarkUtils, ResultsDirName_ContainsMiddleware) {
-    _options.middle_ware = "connext";
+    _options.middle_ware = "connextdds";
     std::string results_dir_name = create_results_dir_name(_options);
 
-    ASSERT_TRUE(contains_string(results_dir_name, "_connext_"));
+    ASSERT_TRUE(contains_string(results_dir_name, "_connextdds_"));
 }
 
 TEST_F(TestBenchmarkUtils, ResultsDirName_ContainsIpc) {
@@ -232,20 +232,20 @@ TEST_F(TestBenchmarkUtils, GetWsFromBenchmarkFolder) {
 }
 
 TEST_F(TestBenchmarkUtils, SetConnextAsMiddleware_ProperEnvSet) {
-    set_middleware("connext");
-    ASSERT_EQ(std::string(getenv("RMW_IMPLEMENTATION")), "rmw_connext_cpp");
+    set_middleware("connextdds");
+    ASSERT_EQ(std::string(getenv("RMW_IMPLEMENTATION")), "rmw_connextdds");
 }
 
 TEST_F(TestBenchmarkUtils, ChangeMiddleware_DefaultEnvVariableSet) {
     const std::string WS_ROOT = "/home/user/repos/ws";
-    set_env_dds_middleware(WS_ROOT, "connext");
+    set_env_dds_middleware(WS_ROOT, "connextdds");
     ASSERT_EQ(std::string(getenv("CYCLONEDDS_URI")),
               WS_ROOT + "/config/qos_cyclonedds.xml");
     ASSERT_EQ(std::string(getenv("FASTRTPS_DEFAULT_PROFILES_FILE")),
               WS_ROOT + "/config/qos_fastrtps.xml");
     ASSERT_EQ(std::string(getenv("RMW_FASTRTPS_USE_QOS_FROM_XML")), "1");
     ASSERT_EQ(std::string(getenv("NDDS_QOS_PROFILES")),
-              "[" + WS_ROOT + "/config/qos_connext.xml]");
+              "[" + WS_ROOT + "/config/qos_connextdds.xml]");
 }
 
 TEST_F(TestBenchmarkUtils, LogSystemInfo_FileProperlyCreated) {

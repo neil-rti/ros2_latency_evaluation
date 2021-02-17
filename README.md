@@ -106,7 +106,7 @@ If you want to activate profiling, you must ensure that the intraprocess communi
 
 ## Change Middleware
 
-Do so by changing the cli parmeter `--middleware {connext, fastrtps, cyclonedds}`. The folder contains config files for setting the qos parameter.
+Do so by changing the cli parmeter `--middleware {connextdds, fastrtps, cyclonedds}`. The folder contains config files for setting the qos parameter.
 
 For QOS profiles:
 

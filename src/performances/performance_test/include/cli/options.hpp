@@ -203,7 +203,7 @@ class Options {
     std::string msg_size;
     std::string qos_reliability;
     const std::vector<std::string> SUPPORTED_MIDDLEWARES = {
-        "cyclonedds", "connext", "fastrtps", "fastrtps_dynamic"};
+        "cyclonedds", "connextdds", "fastrtps", "fastrtps_dynamic"};
     const std::vector<std::string> SUPPORTED_MSG_SIZES = {"100b", "1kb", "10kb",
                                                           "100kb", "500kb"};
     const std::vector<std::string> SUPPORTED_QOS_RELIABILITIES = {

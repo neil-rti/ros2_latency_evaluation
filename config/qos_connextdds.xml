@@ -1,0 +1,33 @@
+<!-- 
+RTI Connext DDS User QoS Profiles
+
+This document is intended to be used to extend the builtin QoS profiles if 
+desired. Each of the builtin profiles, other than the Baseline.x.x.x 
+profiles, has a counterpart in this file named User.X, where X is the profile 
+that it is inheriting from. 
+
+All of the built-in profiles can be found in the 
+BuiltinProfiles.documentationONLY.xml file located in the
+$NDDSHOME/resource/xml/ directory. 
+
+In order to have the profiles in this file automatically loaded into your
+application you should keep this file in the same location, but rename it to
+NDDS_QOS_PROFILES.xml. You will then be able to refer to these profiles by name
+in your application. 
+
+-->
+<dds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://community.rti.com/schema/6.0.1/rti_dds_qos_profiles.xsd">
+    <!-- Qos Library -->
+    <qos_library name="UserQosProfilesLibrary">
+
+        <qos_profile name="factoryLogging" is_default_participant_factory_profile="true">
+            <participant_factory_qos>
+                <logging>
+                    <verbosity>ERROR</verbosity>
+                    <category>ALL</category>
+                    <print_format>VERBOSE_TIMESTAMPED</print_format>
+                </logging>
+            </participant_factory_qos>
+        </qos_profile>
+    </qos_library>
+</dds>

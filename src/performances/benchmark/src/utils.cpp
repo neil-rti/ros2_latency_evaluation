@@ -121,7 +121,7 @@ void set_env_dds_middleware(const std::string& ws_root,
         ws_root + "/config/qos_fastrtps.xml";
     std::string rmw_fastrtps_use_qos_from_xml_env = "1";
     std::string ndds_qos_profiles_env =
-        "[" + ws_root + "/config/qos_connext.xml]";
+        "[" + ws_root + "/config/qos_connextdds.xml]";
 
     setenv("RMW_IMPLEMENTATION", rmw_implementation_env.c_str(), 1);
     setenv("CYCLONEDDS_URI", cyclone_dds_uri_env.c_str(), 1);

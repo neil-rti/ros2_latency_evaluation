@@ -3,7 +3,7 @@
 #############################
 # change variables here
 
-DDS_BACKENDS='connext fastrtps cyclonedds'
+DDS_BACKENDS='connextdds fastrtps cyclonedds'
 
 DPP_RANGE_START=1
 DPP_RANGE_END=21

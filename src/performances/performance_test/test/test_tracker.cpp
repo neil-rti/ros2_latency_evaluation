@@ -246,7 +246,7 @@ TEST_F(TestTracker, Testinter_node_latency_statsUpdate_FastRTPS) {
 }
 
 TEST_F(TestTracker, TestProfiling_DdsOnDataNoSkipForNonFastRTPSBackend) {
-    setenv("RMW_IMPLEMENTATION", "rmw_connext_cpp", 1);
+    setenv("RMW_IMPLEMENTATION", "rmw_connextdds", 1);
 
     performance_test::Tracker::TrackingOptions t_options;
     t_options.enable_profiling = true;
