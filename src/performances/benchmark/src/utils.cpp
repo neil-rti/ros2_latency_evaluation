@@ -123,6 +123,9 @@ void set_env_dds_middleware(const std::string& ws_root,
     std::string ndds_qos_profiles_env =
         "[" + ws_root + "/config/qos_connextdds.xml]";
 
+    if(middle_ware == "connextdds") {
+        rmw_implementation_env = "rmw_" + middle_ware;
+    }
     setenv("RMW_IMPLEMENTATION", rmw_implementation_env.c_str(), 1);
     setenv("CYCLONEDDS_URI", cyclone_dds_uri_env.c_str(), 1);
     setenv("FASTRTPS_DEFAULT_PROFILES_FILE",
